@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useState } from "react";
 
-const useScrollPosition = () => {
+type RefType = MutableRefObject<null | HTMLElement>;
+
+const useScrollPosition = (ref: RefType) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const scrollThrottleDelay = 16; // set the desired throttle delay in milliseconds
 
@@ -10,7 +12,9 @@ const useScrollPosition = () => {
       // use requestAnimationFrame for smoother animation
       requestAnimationFrame(() => {
         // update scroll position
-        const currentScrollPosition = window.scrollY;
+        const currentScrollPosition = ref
+          ? ref?.current?.getBoundingClientRect()?.y || 0
+          : window.scrollY;
 
         setScrollPosition(currentScrollPosition);
       });

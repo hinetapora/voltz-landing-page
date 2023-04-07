@@ -1,9 +1,8 @@
-import React from "react";
+import MainButton from "@/src/components/buttons/MainButton";
+import useScrollPosition from "@/src/hooks/useScrollPosition";
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 import Logo from "public/logo-full.svg";
-import MainButton from "@/src/components/buttons/MainButton";
-import useScrollPosition from "@/src/hooks/useScrollPosition";
 
 const NeonBox = ({ sx = {} }) => {
   return (

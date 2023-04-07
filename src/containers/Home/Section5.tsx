@@ -9,7 +9,7 @@ const CARDS = [
 
 const Section5 = () => {
   return (
-    <Container sx={{ maxWidth: "744px!important", mt: 15 }}>
+    <Container maxWidth="md" sx={{ mt: 15 }}>
       <Typography variant="h4">ETH STAKING</Typography>
 
       <Typography

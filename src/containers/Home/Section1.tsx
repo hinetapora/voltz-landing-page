@@ -17,8 +17,6 @@ const Section1 = () => {
       });
   }, []);
 
-  console.log(coins);
-
   return (
     <Paper>
       <Marquee gradient={false} speed={50}>

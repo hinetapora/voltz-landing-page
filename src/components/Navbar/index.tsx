@@ -15,7 +15,7 @@ import Logo from "public/logo.svg";
 import MainButton from "../buttons/MainButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export const MenuButton: React.FC<ButtonProps> = ({ children }) => (
+export const MenuButton: React.FC<ButtonProps> = ({ children, sx = {} }) => (
   <Button
     sx={(theme) => ({
       letterSpacing: "2px",
@@ -27,6 +27,7 @@ export const MenuButton: React.FC<ButtonProps> = ({ children }) => (
         color: "text.primary",
         filter: theme.custom.customShadow1,
       },
+      ...sx,
     })}
   >
     {children}

@@ -11,6 +11,8 @@ import Bg2 from "@/src/assets/images/bg2.svg";
 import Section4 from "@/src/containers/Home/Section4";
 import Section5 from "@/src/containers/Home/Section5";
 import Section6 from "@/src/containers/Home/Section6";
+import Section7 from "@/src/containers/Home/Section7";
+import Section8 from "@/src/containers/Home/Section8";
 
 const Home = () => {
   return (
@@ -18,14 +20,12 @@ const Home = () => {
       {/* Navbar */}
       <Navbar />
 
-      <Box
-        sx={{ minHeight: "200vh", position: "relative", overflow: "hidden" }}
-      >
+      <Box sx={{ position: "relative", overflow: "hidden" }}>
         <Section1 />
 
         <Section2 />
 
-        <Container maxWidth="lg" sx={{ position: "relative" }}>
+        <Container maxWidth="lg" sx={{ position: "relative", px: 0 }}>
           <Image
             src={Bg1}
             alt="BG 1"
@@ -61,6 +61,10 @@ const Home = () => {
 
           <Section6 />
         </Container>
+
+        <Section7 />
+
+        <Section8 />
       </Box>
 
       {/* Footer */}

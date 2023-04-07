@@ -18,7 +18,7 @@ const Stat: React.FC<StatProps> = ({ title, subtitle }) => (
 
 const Section3 = () => {
   return (
-    <Container sx={{ maxWidth: "744px!important" }}>
+    <Container maxWidth="md">
       <Stack alignItems="center" sx={{ textAlign: "center" }}>
         <HomeTitle sx={{ mb: 1.5 }}>THE PROTOCOL</HomeTitle>
 

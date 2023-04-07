@@ -10,7 +10,7 @@ const CARDS = [
 
 const Section4 = () => {
   return (
-    <Container sx={{ maxWidth: "744px!important", mt: 15 }}>
+    <Container maxWidth="md" sx={{ mt: 15 }}>
       <Typography variant="h4">STABLECOIN YIELD</Typography>
 
       <Typography

@@ -10,8 +10,13 @@ const CARDS = [
 
 const Section6 = () => {
   return (
-    <Container sx={{ maxWidth: "744px!important", mt: 15 }}>
-      <Typography variant="h4">BORROWING MARKETS</Typography>
+    <Container maxWidth="md" sx={{ mt: 15 }}>
+      <Typography variant="h4">
+        <Typography variant="h4" component="span" color="primary.light">
+          BORROWING
+        </Typography>{" "}
+        MARKETS
+      </Typography>
 
       <Typography
         sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
