@@ -16,13 +16,15 @@ import Image from "next/image";
 const StyledPerson = styled(Image)({
   //   position: "absolute",
   zIndex: -1,
+  height: "100%",
+  objectFit: "contain",
 });
 
 const Section9 = () => {
   const theme = useTheme();
 
   return (
-    <Container maxWidth="md" sx={{ mt: { xs: 25, md: 35 }, pb: 200 }}>
+    <Container maxWidth="md" sx={{ mt: { xs: 25, md: 35 }, pb: 10 }}>
       <Stack alignItems="center">
         <HomeTitle sx={{ mb: 1.5 }} color={theme.palette.primary.light}>
           THE FAM
@@ -60,12 +62,16 @@ const Section9 = () => {
 
       <Container maxWidth="sm" sx={{ mt: -10 }}>
         <Stack direction="row" alignItems="flex-end" justifyContent="center">
-          <StyledPerson src={PersonImg1} alt="Person 1" />
+          <StyledPerson src={PersonImg1} alt="Person 1" sx={{ pb: 5 }} />
 
-          <StyledPerson src={PersonImg2} alt="Person 2" />
+          <StyledPerson src={PersonImg2} alt="Person 2" sx={{ width: "60%" }} />
 
           <Hidden mdDown>
-            <StyledPerson src={PersonImg3} alt="Person 3" />
+            <StyledPerson
+              src={PersonImg3}
+              alt="Person 3"
+              sx={{ width: "40%", ml: -5 }}
+            />
           </Hidden>
         </Stack>
       </Container>
