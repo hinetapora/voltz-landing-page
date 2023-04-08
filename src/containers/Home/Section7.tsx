@@ -10,8 +10,8 @@ import {
   Stack,
   Typography,
   styled,
+  useMediaQuery,
   useTheme,
-  Hidden,
 } from "@mui/material";
 import Image from "next/image";
 import { useRef } from "react";
@@ -36,15 +36,15 @@ const CARDS = [
 
 const DOORS = [
   {
-    left: "22%",
+    left: { xs: "5%", sm: "10%", md: "22%" },
     top: "52%",
   },
-  { left: "31%", top: "72%" },
-  { left: "35%", top: "45%" },
-  { left: "42%", top: "38%" },
-  { left: "52%", top: "51%" },
-  { left: "59%", top: "83%" },
-  { left: "64%", top: "60%" },
+  { left: { xs: "12%", sm: "18%", md: "31%" }, top: "72%" },
+  { left: { xs: "20%", sm: "25%", md: "35%" }, top: "45%" },
+  { left: { xs: "30%", sm: "33%", md: "42%" }, top: "38%" },
+  { left: { xs: "40%", sm: "43%", md: "52%" }, top: "51%" },
+  { left: { xs: "47%", sm: "49%", md: "59%" }, top: "83%" },
+  { left: { xs: "54%", sm: "58%", md: "64%" }, top: "60%" },
 ];
 
 const StyledDoor = styled(Image)<{ skew: number }>(({ skew }) => ({
@@ -58,9 +58,7 @@ const Section7 = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const scrollPosition = useScrollPosition(containerRef);
   const theme = useTheme();
-
-  const _skew = (scrollPosition - 400) / 8;
-  const skew = _skew < -50 ? -50 : _skew > 0 ? 0 : _skew;
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const COLORS: any = {
     0: theme.palette.secondary.light,
@@ -71,11 +69,11 @@ const Section7 = () => {
   return (
     <Container
       ref={containerRef}
-      sx={{ maxWidth: "1080px!important", mt: { xs: 25, md: 40 }, pb: 15 }}
+      sx={{ maxWidth: "1080px!important", mt: { xs: 25, md: 35 }, pb: 15 }}
     >
       <Stack
         alignItems="center"
-        sx={{ textAlign: "center", mb: { xs: 10, md: 12 } }}
+        sx={{ textAlign: "center", mb: { xs: 5, md: 12 } }}
       >
         <HomeTitle sx={{ mb: 1.5 }} color={theme.palette.secondary.light}>
           THE PLAYERS
@@ -97,36 +95,38 @@ const Section7 = () => {
 
       <Grid container spacing={{ xs: 3, md: 6 }}>
         {CARDS.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i} sx={{ zIndex: 9999 }}>
+          <Grid item xs={12} sm={6} md={4} key={i} sx={{ zIndex: 1 }}>
             <PlayersCard color={COLORS[i]} {...item} />
           </Grid>
         ))}
       </Grid>
 
       {/* Doors BG */}
-      <Hidden smDown>
-        <Box
-          sx={{
-            mt: -35,
-            backgroundImage:
-              "linear-gradient(180deg,rgba(15,12,29,0) 40%,#0f0c1d)",
-            position: "relative",
-            height: 400,
-            overflow: "hidden",
-          }}
-        >
-          {DOORS.map((door, i) => (
-            <StyledDoor
-              src={DoorImg}
-              alt="Door Image"
-              skew={skew}
-              sx={{
-                ...door,
-              }}
-            />
-          ))}
-        </Box>
-      </Hidden>
+      <Box
+        sx={{
+          mt: -35,
+          backgroundImage:
+            "linear-gradient(180deg,rgba(15,12,29,0) 40%,#0f0c1d)",
+          position: "relative",
+          height: 400,
+          overflow: "hidden",
+        }}
+      >
+        {DOORS.map((door, i) => (
+          <StyledDoor
+            src={DoorImg}
+            alt="Door Image"
+            skew={Math.min(
+              0,
+              Math.max(-50, (scrollPosition - 400) / 15 + (isMobile ? 25 : 0))
+            )}
+            key={i}
+            sx={{
+              ...door,
+            }}
+          />
+        ))}
+      </Box>
 
       <Stack alignItems="center">
         <MenuButton sx={{ fontSize: 16 }}>

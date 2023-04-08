@@ -1,4 +1,7 @@
-import DoorImg from "@/src/assets/images/sec7_door.svg";
+import DoorImg1 from "@/src/assets/images/sec8_door1.svg";
+import DoorImg2 from "@/src/assets/images/sec8_door2.svg";
+import DoorImg3 from "@/src/assets/images/sec8_door3.svg";
+import DoorImg4 from "@/src/assets/images/sec8_door4.svg";
 import HomeTitle from "@/src/components/HomeTitle";
 import { MenuButton } from "@/src/components/Navbar";
 import useScrollPosition from "@/src/hooks/useScrollPosition";
@@ -13,58 +16,20 @@ import {
 import Image from "next/image";
 import { useRef } from "react";
 
-const CARDS = [
-  {
-    title: "FIX TAKERS",
-    subtitle:
-      "Trading rates for fixed returns? Convert any asset with a variable rate into a fixed rate product.",
-  },
-  {
-    title: "LIQUIDITY PROVIDER",
-    subtitle:
-      "Liquidity to invest? Deposit within your tick range, collect returns.",
-  },
-  {
-    title: "VARIABLE TAKERS",
-    subtitle:
-      "Trading variable rates with leverage? Take variable, take alpha.",
-  },
-];
-
-const DOORS = [
-  {
-    left: "22%",
-    top: "52%",
-  },
-  { left: "31%", top: "72%" },
-  { left: "35%", top: "45%" },
-  { left: "42%", top: "38%" },
-  { left: "52%", top: "51%" },
-  { left: "59%", top: "83%" },
-  { left: "64%", top: "60%" },
-];
-
-const StyledDoor = styled(Image)<{ skew: number }>(({ skew }) => ({
+const StyledDoor = styled(Image)({
   position: "absolute",
   zIndex: -1,
   willChange: "transform",
-  transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, ${skew}deg)`,
-}));
+});
 
 const Section8 = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const scrollPosition = useScrollPosition(containerRef);
   const theme = useTheme();
 
-  const _skew = (scrollPosition - 400) / 8;
-  const skew = _skew < -50 ? -50 : _skew > 0 ? 0 : _skew;
-
   return (
-    <Container ref={containerRef} maxWidth="md" sx={{ mt: 20 }}>
-      <Stack
-        alignItems="center"
-        sx={{ textAlign: "center", mb: { xs: 5, md: 7 } }}
-      >
+    <Container ref={containerRef} maxWidth="md" sx={{ mt: 15 }}>
+      <Stack alignItems="center" sx={{ textAlign: "center", mb: 5 }}>
         <HomeTitle sx={{ mb: 1.5 }} color={theme.palette.primary.contrastText}>
           THE PLAYGROUND
         </HomeTitle>
@@ -94,6 +59,80 @@ const Section8 = () => {
       </Stack>
 
       {/* Doors BG */}
+      <Box
+        sx={{
+          mt: -6,
+          backgroundImage:
+            "linear-gradient(180deg,rgba(15,12,29,0) 80%,#0f0c1d)",
+          position: "relative",
+          height: 400,
+          overflow: "hidden",
+          width: "100%",
+        }}
+      >
+        {/* 1 */}
+        <StyledDoor
+          src={DoorImg1}
+          alt="Door Image 1"
+          sx={{
+            left: { xs: "6%", sm: "12%", md: "22%" },
+            top: "52%",
+            transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, ${Math.min(
+              20,
+              Math.max(0, (600 - scrollPosition) / 30)
+            )}deg)`,
+          }}
+        />
+
+        {/* 2 */}
+        <StyledDoor
+          src={DoorImg2}
+          alt="Door Image 2"
+          sx={{
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+              objectFit: "contain",
+            },
+            left: { sm: "8%", md: "27%" },
+            top: "29%",
+            transform: `translate3d(0px, -${Math.min(
+              50,
+              Math.max(0, (600 - scrollPosition) / 15)
+            )}px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+          }}
+        />
+
+        {/* 3 */}
+        <StyledDoor
+          src={DoorImg3}
+          alt="Door Image 3"
+          sx={{
+            left: { xs: "17%", sm: "20%", md: "35%" },
+            top: "43%",
+            transform: `translate3d(-${Math.min(
+              50,
+              Math.max(0, (600 - scrollPosition) / 30)
+            )}px, -${Math.min(
+              50,
+              Math.max(0, (600 - scrollPosition) / 40)
+            )}px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+          }}
+        />
+
+        {/* 4 */}
+        <StyledDoor
+          src={DoorImg4}
+          alt="Door Image 4"
+          sx={{
+            left: { xs: "20%", sm: "25%", md: "44%" },
+            top: "36%",
+            transform: `translate3d(${Math.min(
+              50,
+              Math.max(0, (600 - scrollPosition) / 15)
+            )}px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+          }}
+        />
+      </Box>
     </Container>
   );
 };

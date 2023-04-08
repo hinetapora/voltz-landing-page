@@ -13,10 +13,11 @@ import Section5 from "@/src/containers/Home/Section5";
 import Section6 from "@/src/containers/Home/Section6";
 import Section7 from "@/src/containers/Home/Section7";
 import Section8 from "@/src/containers/Home/Section8";
+import Section9 from "@/src/containers/Home/Section9";
 
 const Home = () => {
   return (
-    <Box sx={{ pb: 20 }}>
+    <Box sx={{ pb: 3 }}>
       {/* Navbar */}
       <Navbar />
 
@@ -65,6 +66,8 @@ const Home = () => {
         <Section7 />
 
         <Section8 />
+
+        <Section9 />
       </Box>
 
       {/* Footer */}
