@@ -2,13 +2,11 @@ import MainButton from "@/src/components/buttons/MainButton";
 import useScrollPosition from "@/src/hooks/useScrollPosition";
 import {
   Box,
-  BoxProps,
   Container,
   Stack,
   Typography,
-  useTheme,
   styled,
-  SxProps,
+  useTheme
 } from "@mui/material";
 import Image from "next/image";
 import Logo from "public/logo-full.svg";
