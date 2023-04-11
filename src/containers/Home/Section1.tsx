@@ -2,17 +2,25 @@ import { Avatar, Paper, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
+interface Coin {
+  id: string;
+  image: string;
+  name: string;
+  current_price: number;
+  price_change_percentage_24h: number;
+}
+
 const ENDPOINT =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd";
 
 const Section1 = () => {
-  const [coins, setCoins] = useState([]);
+  const [coins, setCoins] = useState<Coin[]>([]);
 
   useEffect(() => {
     fetch(ENDPOINT)
-      .then((res) => res?.json?.())
+      .then((res) => res?.ok && res.json())
       .then((data) => {
-        const _data = data?.slice?.(0, 20) || [];
+        const _data = data?.slice(0, 20) || [];
         setCoins(_data);
       });
   }, []);
@@ -20,7 +28,7 @@ const Section1 = () => {
   return (
     <Paper>
       <Marquee gradient={false} speed={50}>
-        {coins.map((coin: any) => (
+        {coins.map((coin) => (
           <Stack
             sx={{ mx: 1.5, py: 0.5 }}
             key={coin.id}

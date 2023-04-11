@@ -1,14 +1,4 @@
-import React from "react";
-import {
-  AppBar,
-  Button,
-  ButtonProps,
-  Stack,
-  Typography,
-  keyframes,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { AppBar, Stack, useTheme } from "@mui/material";
 import { MenuButton } from "../Navbar";
 
 const Footer = () => {

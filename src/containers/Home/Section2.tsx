@@ -1,13 +1,22 @@
 import MainButton from "@/src/components/buttons/MainButton";
 import useScrollPosition from "@/src/hooks/useScrollPosition";
-import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  BoxProps,
+  Container,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
 import Logo from "public/logo-full.svg";
 
-const NeonBox = ({ sx = {} }) => {
+const NeonBox: React.FC<BoxProps> = ({ sx = {} }) => {
+  const theme = useTheme();
+
   return (
     <Box
-      sx={(theme) => ({
+      sx={{
         mt: 10,
         position: "absolute",
         height: 300,
@@ -36,7 +45,7 @@ const NeonBox = ({ sx = {} }) => {
           width: 800,
         },
         ...sx,
-      })}
+      }}
     />
   );
 };
