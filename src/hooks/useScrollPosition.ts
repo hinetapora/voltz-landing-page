@@ -1,11 +1,11 @@
-import { MutableRefObject, useEffect, useState } from "react";
+import { MutableRefObject, useLayoutEffect, useState } from "react";
 
 type RefType = MutableRefObject<null | HTMLElement>;
 
 const useScrollPosition = (ref?: RefType) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // function to handle scroll event with throttling
     const handleScroll = () => {
       // use requestAnimationFrame for smoother animation

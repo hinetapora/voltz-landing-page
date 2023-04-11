@@ -7,48 +7,41 @@ import {
   Stack,
   Typography,
   useTheme,
+  styled,
+  SxProps,
 } from "@mui/material";
 import Image from "next/image";
 import Logo from "public/logo-full.svg";
 
-const NeonBox: React.FC<BoxProps> = ({ sx = {} }) => {
-  const theme = useTheme();
-
-  return (
-    <Box
-      sx={{
-        mt: 10,
-        position: "absolute",
-        height: 300,
-        width: 400,
-        border: "3px solid #000",
-        borderColor: "#004e95",
-        boxShadow:
-          "inset -1px -1px 20px 0 rgba(255,74,169,.3), 2px 2px 20px 0 rgba(255,74,169,.32), inset 3px 3px 20px -2px rgba(0,78,149,.48), -8px 1px 18px 0 rgba(0,78,149,.42)",
-        borderImage: "linear-gradient(to right, #3966FF, #FF599C) 1",
-        transformStyle: "preserve-3d",
-        willChange: "transform, opacity",
-        transition: "all 0.3s ease",
-        zIndex: -1,
-        [theme.breakpoints.up("sm")]: {
-          mt: 6,
-          height: 350,
-          width: 600,
-        },
-        [theme.breakpoints.up("md")]: {
-          height: 400,
-          width: 720,
-        },
-        [theme.breakpoints.up("lg")]: {
-          mt: 8,
-          height: 440,
-          width: 800,
-        },
-        ...sx,
-      }}
-    />
-  );
-};
+const NeonBox = styled(Box)(({ theme }) => ({
+  mt: 10,
+  position: "absolute",
+  height: 300,
+  width: 400,
+  border: "3px solid #000",
+  borderColor: "#004e95",
+  boxShadow:
+    "inset -1px -1px 20px 0 rgba(255,74,169,.3), 2px 2px 20px 0 rgba(255,74,169,.32), inset 3px 3px 20px -2px rgba(0,78,149,.48), -8px 1px 18px 0 rgba(0,78,149,.42)",
+  borderImage: "linear-gradient(to right, #3966FF, #FF599C) 1",
+  transformStyle: "preserve-3d",
+  willChange: "transform, opacity",
+  transition: "all 0.3s ease",
+  zIndex: -1,
+  [theme.breakpoints.up("sm")]: {
+    mt: 6,
+    height: 350,
+    width: 600,
+  },
+  [theme.breakpoints.up("md")]: {
+    height: 400,
+    width: 720,
+  },
+  [theme.breakpoints.up("lg")]: {
+    mt: 8,
+    height: 440,
+    width: 800,
+  },
+}));
 
 const Section2 = () => {
   const theme = useTheme();
