@@ -11,7 +11,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import Logo from "public/logo.svg";
+import Logo from "public/logo-dark.svg";
 import MainButton from "../buttons/MainButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
