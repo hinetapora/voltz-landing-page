@@ -69,27 +69,24 @@ const Section7 = () => {
   return (
     <Container
       ref={containerRef}
-      sx={{ maxWidth: "1080px!important", mt: { xs: 25, md: 35 }, pb: 15 }}
+      sx={{ maxWidth: "1080px!important", mt: { xs: 15, md: 15 }, pb: 15 }}
     >
       <Stack
         alignItems="center"
         sx={{ textAlign: "center", mb: { xs: 5, md: 12 } }}
       >
-        <HomeTitle sx={{ mb: 1.5 }} color={theme.palette.secondary.light}>
-          THE PLAYERS
-        </HomeTitle>
+
 
         <Typography variant="h2" sx={{ fontWeight: "bold", mb: 2 }}>
-          Trade Rates Like a Pro
+        🚀 OUR MISSION
         </Typography>
 
         <Typography
           sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
           color="text.secondary"
         >
-          UnblockVPN is foundational defi infrastructure, unlocking waves of
-          composable, community-led opportunities for builders, innovators and
-          creators.
+          To speed up the world's shift towards an intelligently optimized and fully private web3.0. 
+          It's happening right here, right now, and we're just getting started. The DAO is growing at a pace that's turning heads. Get in from the ground up.
         </Typography>
       </Stack>
 

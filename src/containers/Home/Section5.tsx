@@ -10,23 +10,26 @@ const CARDS = [
 const Section5 = () => {
   return (
     <Container maxWidth="md" sx={{ mt: 15 }}>
-      <Typography variant="h4">ETH STAKING</Typography>
+      <Typography variant="h4">$$UNBLK TOKEN</Typography>
 
       <Typography
         sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
         color="text.secondary"
       >
-        The base rate of the metaverse. Trade ETH Staking markets on Lido and
-        Rocket, all you need is ETH to trade.
+        🔥 We're not just another token; we're leading the decentralized charge. 
+        Our VPN is powered by cutting-edge AI delivering lowest path cost routing constantly optimize the network for max speed and low latency. 
+        
+        Your privacy remains immutable. We never log traffic, period. And we never will.
+
       </Typography>
 
-      <Grid container spacing={3} sx={{ mt: 3 }}>
+{/*       <Grid container spacing={3} sx={{ mt: 3 }}>
         {CARDS.map((item, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
             <YieldCard {...item} />
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Container>
   );
 };

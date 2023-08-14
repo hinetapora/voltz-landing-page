@@ -18,7 +18,7 @@ const Stat: React.FC<StatProps> = ({ title, subtitle }) => (
 
 const Section3 = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="section-2">
       <Stack alignItems="center" sx={{ textAlign: "center" }}>
         <HomeTitle sx={{ mb: 1.5 }}>THE PROTOCOL</HomeTitle>
 
@@ -27,11 +27,11 @@ const Section3 = () => {
         </Typography>
 
         <Typography sx={{ letterSpacing: "1.5px" }} color="text.secondary">
-          UnblockVPN is a novel defi primitive, powering leveraged interest rate
-          swaps. The first ever synthetic interest rate swap AMM, UnblockVPN AMM
-          utilizes concentrated liquidity, creating a market that's c.3000x more
-          capital efficient.
-        </Typography>
+        🌐🚀 $UNBLK: Shape Tomorrow's Web3.0 with Us: decentralized, private, and optimized web
+        
+         JOIN our DAO in a venture that's rewriting the online rulebook. It's not just a dApp; it's a chance to hodl your spot in the evolution of an unblocked web.
+
+ </Typography>
       </Stack>
 
       <Stack
@@ -41,8 +41,8 @@ const Section3 = () => {
         spacing={2}
         sx={{ mt: 3 }}
       >
-        <Stat title=">$8Bn" subtitle="NOTIONAL TRADED" />
-        <Stat title=">$11Bn" subtitle="NOTIONAL LIQUIDITY PROVIDED" />
+        <Stat title="100Gbps" subtitle="CORE INTERNET LINKS" />
+        <Stat title="157" subtitle="COUNTRIES AND CLIMBING" />
       </Stack>
     </Container>
   );

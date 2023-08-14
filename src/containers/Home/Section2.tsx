@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Logo from "public/glitch-image-1691933758.png";
+import { Link } from "react-scroll";
+
 
 const NeonBox = styled(Box)(({ theme }) => ({
   mt: 10,
@@ -68,11 +70,21 @@ const Section2 = () => {
           style={{ width: "100%", height: 40, objectFit: "contain" }}
         />
 
-        <Typography variant="h5" sx={{ mt: -10, mb: 10 }}>
-          THE UNBLOCKVPN DAO
+        <Typography variant="h5" sx={{ mt: 5, mb: 5 }}>
+          The UnblockVPN DAO
         </Typography>
 
-        <MainButton>PRESS FOR ALPHA</MainButton>
+        <Link
+  activeClass="active"
+  to="section-2" // The target section's id
+  spy={true}
+  smooth={true}
+  offset={-70}
+  duration={700}
+>
+  <MainButton>PRESS FOR ALPHA</MainButton>
+</Link>
+
 
         {/* Neon Boxes */}
         {scrollPosition < 700 && (
