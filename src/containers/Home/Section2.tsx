@@ -9,7 +9,7 @@ import {
   useTheme
 } from "@mui/material";
 import Image from "next/image";
-import Logo from "public/logo-full.svg";
+import Logo from "public/glitch-image-1691933758.png";
 
 const NeonBox = styled(Box)(({ theme }) => ({
   mt: 10,
@@ -64,12 +64,12 @@ const Section2 = () => {
       >
         <Image
           src={Logo}
-          alt="Voltz Logo"
-          style={{ width: "100%", height: 250, objectFit: "contain" }}
+          alt="UnblockVPN Logo"
+          style={{ width: "100%", height: 40, objectFit: "contain" }}
         />
 
-        <Typography variant="h5" sx={{ mt: -10, mb: 5 }}>
-          THE INTEREST RATE SWAP AMM
+        <Typography variant="h5" sx={{ mt: -10, mb: 10 }}>
+          THE UNBLOCKVPN DAO
         </Typography>
 
         <MainButton>PRESS FOR ALPHA</MainButton>

@@ -35,7 +35,7 @@ const Section8 = () => {
         </HomeTitle>
 
         <Typography variant="h2" sx={{ fontWeight: "bold", mb: 2 }}>
-          Build on Voltz
+          Build on UnblockVPN
         </Typography>
 
         <Typography
@@ -43,7 +43,7 @@ const Section8 = () => {
           color="text.secondary"
         >
           Join a growing community of hackers, innovators and developers
-          building on Voltz. Join us, let's make a dent in the defi universe.
+          building on UnblockVPN. Join us, let's make a dent in the defi universe.
         </Typography>
       </Stack>
 
@@ -55,7 +55,7 @@ const Section8 = () => {
       >
         <MenuButton sx={{ fontSize: 16 }}>DEVELOPER DOCS</MenuButton>
 
-        <MenuButton sx={{ fontSize: 16 }}>VOLTZ DOCS</MenuButton>
+        <MenuButton sx={{ fontSize: 16 }}>UnblockVPN DOCS</MenuButton>
       </Stack>
 
       {/* Doors BG */}

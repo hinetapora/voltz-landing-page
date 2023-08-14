@@ -56,7 +56,7 @@ const Section9 = () => {
           color="text.secondary"
           sx={{ pb: 2, whiteSpace: "pre-line", ml: -10 }}
         >
-          {"They don't know\nI'm on Voltz discord"}
+          {"They don't know\nI'm on UnblockVPN discord"}
         </Typography>
       </Stack>
 

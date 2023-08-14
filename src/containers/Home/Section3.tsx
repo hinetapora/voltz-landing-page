@@ -27,8 +27,8 @@ const Section3 = () => {
         </Typography>
 
         <Typography sx={{ letterSpacing: "1.5px" }} color="text.secondary">
-          Voltz is a novel defi primitive, powering leveraged interest rate
-          swaps. The first ever synthetic interest rate swap AMM, Voltz AMM
+          UnblockVPN is a novel defi primitive, powering leveraged interest rate
+          swaps. The first ever synthetic interest rate swap AMM, UnblockVPN AMM
           utilizes concentrated liquidity, creating a market that's c.3000x more
           capital efficient.
         </Typography>

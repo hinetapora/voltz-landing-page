@@ -87,7 +87,7 @@ const Section7 = () => {
           sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
           color="text.secondary"
         >
-          Voltz is foundational defi infrastructure, unlocking waves of
+          UnblockVPN is foundational defi infrastructure, unlocking waves of
           composable, community-led opportunities for builders, innovators and
           creators.
         </Typography>

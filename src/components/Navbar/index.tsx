@@ -123,7 +123,7 @@ const Navbar = () => {
             <MenuButton>BACKERS</MenuButton>
 
             <MainButton size="small" sx={{ height: 32 }}>
-              TRADE
+              CONNECT
             </MainButton>
           </Stack>
         )}
