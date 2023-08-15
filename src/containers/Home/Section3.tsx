@@ -27,7 +27,7 @@ const Section3 = () => {
         </Typography>
 
         <Typography sx={{ letterSpacing: "1.5px" }} color="text.secondary">
-        🌐🚀 $UNBLK: Shape Tomorrow's Web3.0 with Us: decentralized, private, and optimized web
+        🌐🚀 $$UNBLK: Shape Tomorrow's Web3.0 with Us: decentralized, private, and optimized web
         
          JOIN our DAO in a venture that's rewriting the online rulebook. It's not just a dApp; it's a chance to hodl your spot in the evolution of an unblocked web.
 

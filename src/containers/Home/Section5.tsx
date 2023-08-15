@@ -17,7 +17,7 @@ const Section5 = () => {
         color="text.secondary"
       >
         🔥 We're not just another token; we're leading the decentralized charge. 
-        Our VPN is powered by cutting-edge AI delivering lowest path cost routing constantly optimize the network for max speed and low latency. 
+        Our VPN is powered by cutting-edge AI delivering lowest path cost routing constantly optimizing the network for maximum throughput and lowest latency. 
         
         Your privacy remains immutable. We never log traffic, period. And we never will.
 
