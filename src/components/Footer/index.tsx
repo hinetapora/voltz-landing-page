@@ -29,8 +29,9 @@ const Footer = () => {
           alignItems="center"
           sx={{ height: "100%" }}
         >
+          <a href="https://discord.com/channels/1140888098327232516/1140888099413569701">
           <MenuButton>DISCORD</MenuButton>
-
+          </a>
           <MenuButton>TWITTER</MenuButton>
 
           <MenuButton>STUDIO</MenuButton>
