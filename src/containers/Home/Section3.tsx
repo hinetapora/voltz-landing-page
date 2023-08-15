@@ -41,8 +41,9 @@ const Section3 = () => {
         spacing={2}
         sx={{ mt: 3 }}
       >
-        <Stat title="100Gbps" subtitle="CORE INTERNET LINKS" />
+        <Stat title="nx 100Gbps" subtitle="CORE INTERFACES" />
         <Stat title="157" subtitle="COUNTRIES AND CLIMBING" />
+        <Stat title="NG DNS" subtitle="BYPASSING COMMERCIAL BLOCKS" />
       </Stack>
     </Container>
   );
