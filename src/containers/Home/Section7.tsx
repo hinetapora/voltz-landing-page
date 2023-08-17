@@ -18,9 +18,9 @@ import { useRef } from "react";
 
 const CARDS = [
   {
-    title: "FIX TAKERS",
+    title: "VPN USERS",
     subtitle:
-      "Trading rates for fixed returns? Convert any asset with a variable rate into a fixed rate product.",
+      "Accessing to the best performing VPN service period",
   },
   {
     title: "LIQUIDITY PROVIDER",
@@ -28,7 +28,7 @@ const CARDS = [
       "Liquidity to invest? Deposit within your tick range, collect returns.",
   },
   {
-    title: "VARIABLE TAKERS",
+    title: "TRADERS",
     subtitle:
       "Trading variable rates with leverage? Take variable, take alpha.",
   },

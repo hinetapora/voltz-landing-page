@@ -11,31 +11,19 @@ const CARDS = [
 const Section4 = () => {
   return (
     <><Container maxWidth="md" sx={{ mt: 15 }}>
-      <Typography variant="h4">OUR VPN SERVICE</Typography>
+      <Typography variant="h4">OUR BLOCKCHAIN POWERED VPN SERVICE</Typography>
 
       <Typography
         sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
         color="text.secondary"
       >
-        🚀 Our VPN service, fueled by AI on-chain, is breaking ground - tailor-made to revolutionize your online journey.
+        🚀 Our VPN service, fueled by AI on-chain, is breaking new ground - tailor-made to revolutionize your online journey.
 
         Imagine never worrying about slow tx, data leaks, or lack of privacy. That's what we're working on, and we need you on board.
 
 
       </Typography>
 
-
-
-
-
-
-      {/*       <Grid container spacing={3} sx={{ mt: 3 }}>
-            {CARDS.map((item, i) => (
-              <Grid item xs={12} sm={6} md={4} key={i}>
-                <YieldCard {...item} />
-              </Grid>
-            ))}
-          </Grid> */}
     </Container>
     
     <Container maxWidth="md" sx={{ mt: 15 }}>
@@ -54,11 +42,6 @@ const Section4 = () => {
         </Typography>
 
       </Container>
-      
-      
-      
-      
-      
       
       </>
 

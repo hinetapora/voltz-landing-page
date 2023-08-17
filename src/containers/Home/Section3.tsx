@@ -35,9 +35,9 @@ const Section3 = () => {
         </Typography>
 
         <Typography sx={{ letterSpacing: "1.5px" }} color="text.secondary">
-        🌐🚀 $$UNBLK: Shape Tomorrow's Web3.0 with Us: decentralized, private, and optimized web
+        🌐🚀 $$UNBLK: Shape Tomorrow's Web3.0 with Us: a decentralized, private, and optimized web
         
-         JOIN our DAO in a venture that's rewriting the online rulebook. It's not just a dApp; it's a chance to hodl your spot in the evolution of an unblocked web.
+         JOIN our DAO in a venture that's rewriting the online rulebook. It's not just a dApp; it's a chance to hodl your spot in the evolution to an unblocked web.
 
  </Typography>
       </Stack>
@@ -49,8 +49,8 @@ const Section3 = () => {
         spacing={2}
         sx={{ mt: 3 }}
       >
-        <Stat title="nx 100Gbps" subtitle="CORE INTERFACES" />
-        <Stat title="157" subtitle="COUNTRIES AND CLIMBING" />
+        <Stat title="100 Gbps" subtitle="INTERFACES" />
+        <Stat title="157" subtitle="COUNTRIES" />
         <Stat title="NG DNS" subtitle="BYPASSING COMMERCIAL BLOCKS" />
       </Stack>
     </Container>

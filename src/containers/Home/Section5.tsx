@@ -16,20 +16,11 @@ const Section5 = () => {
         sx={{ letterSpacing: "1.5px", maxWidth: 720 }}
         color="text.secondary"
       >
-        🔥 We're not just another token; we're leading the decentralized charge. 
-        Our VPN is powered by cutting-edge AI delivering lowest path cost routing constantly optimizing the network for maximum throughput and lowest latency. 
-        
+        🔥 We're not just another token; we're leading the decentralized charge for a better internet. 
+        Our VPN is powered by cutting-edge AI delivering lowest path cost routing, constantly optimizing the network for maximum throughput and lowest latency. 
         Your privacy remains immutable. We never log traffic, period. And we never will.
 
       </Typography>
-
-{/*       <Grid container spacing={3} sx={{ mt: 3 }}>
-        {CARDS.map((item, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <YieldCard {...item} />
-          </Grid>
-        ))}
-      </Grid> */}
     </Container>
   );
 };
