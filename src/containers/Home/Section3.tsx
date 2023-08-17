@@ -8,7 +8,7 @@ type StatProps = {
 };
 
 const Stat: React.FC<StatProps> = ({ title, subtitle }) => (
-  <Stack alignItems="center">
+  <Stack alignItems="center" >
     <Typography variant="h3">{title}</Typography>
     <Typography color="primary.light" variant="body2">
       {subtitle}
@@ -18,7 +18,15 @@ const Stat: React.FC<StatProps> = ({ title, subtitle }) => (
 
 const Section3 = () => {
   return (
+    <>
+    
     <Container maxWidth="md" id="section-2">
+              <Typography variant="h2" color='#0f0c1d' sx={{ fontWeight: "bold", mb: 5 }}>
+           .
+        </Typography>
+    </Container>
+    
+    <Container maxWidth="md" >
       <Stack alignItems="center" sx={{ textAlign: "center" }}>
         <HomeTitle sx={{ mb: 1.5 }}>THE PROTOCOL</HomeTitle>
 
@@ -46,6 +54,7 @@ const Section3 = () => {
         <Stat title="NG DNS" subtitle="BYPASSING COMMERCIAL BLOCKS" />
       </Stack>
     </Container>
+    </>
   );
 };
 
