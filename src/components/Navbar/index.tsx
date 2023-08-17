@@ -85,6 +85,7 @@ const Navbar = () => {
             style={{ height: "30px", objectFit: "contain" }}
           />
 
+<a href="https://discord.gg/E8qRP5yq" style={{ textDecoration: 'none' }}>
           <Stack
             direction="row"
             alignItems="center"
@@ -98,6 +99,8 @@ const Navbar = () => {
               RESOURCE CENTRE
             </Typography>
           </Stack>
+          </a>
+
         </Stack>
 
         {/* Links */}

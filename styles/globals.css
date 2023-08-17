@@ -5,3 +5,195 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.hide {
+  display: none;
+}
+
+.svgWrap {
+  position: relative;
+  width: 190px;
+  height: 76px;
+}
+
+.svgWrap__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #fff;
+  background: #000;
+  width: 190px;
+  height: 76px;
+}
+.svgWrap__text:nth-child(2), .svgWrap__text:nth-child(3) {
+  clip: rect(0, 0, 0, 0);
+}
+.svgWrap__text:nth-child(2) {
+  fill: #fffafa;
+  left: -2px;
+  animation: svg-glitch-effect 2s infinite linear alternate-reverse;
+}
+.svgWrap__text:nth-child(3) {
+  fill: #f5f5f5;
+  left: 2px;
+  animation: svg-glitch-effect 3s infinite linear alternate-reverse;
+}
+
+@keyframes svg-glitch-effect {
+  0% {
+    clip: rect(65px, 190px, 1px, 0);
+  }
+  5% {
+    clip: rect(14px, 190px, 37px, 0);
+  }
+  10% {
+    clip: rect(1px, 190px, 55px, 0);
+  }
+  15% {
+    clip: rect(47px, 190px, 74px, 0);
+  }
+  20% {
+    clip: rect(70px, 190px, 48px, 0);
+  }
+  25% {
+    clip: rect(8px, 190px, 58px, 0);
+  }
+  30% {
+    clip: rect(44px, 190px, 72px, 0);
+  }
+  35% {
+    clip: rect(17px, 190px, 68px, 0);
+  }
+  40% {
+    clip: rect(51px, 190px, 32px, 0);
+  }
+  45% {
+    clip: rect(56px, 190px, 71px, 0);
+  }
+  50% {
+    clip: rect(1px, 190px, 6px, 0);
+  }
+  55% {
+    clip: rect(52px, 190px, 15px, 0);
+  }
+  60% {
+    clip: rect(41px, 190px, 24px, 0);
+  }
+  65% {
+    clip: rect(67px, 190px, 73px, 0);
+  }
+  70% {
+    clip: rect(25px, 190px, 33px, 0);
+  }
+  75% {
+    clip: rect(8px, 190px, 7px, 0);
+  }
+  80% {
+    clip: rect(70px, 190px, 13px, 0);
+  }
+  85% {
+    clip: rect(15px, 190px, 28px, 0);
+  }
+  90% {
+    clip: rect(38px, 190px, 8px, 0);
+  }
+  95% {
+    clip: rect(46px, 190px, 7px, 0);
+  }
+  100% {
+    clip: rect(50px, 190px, 41px, 0);
+  }
+}
+
+.img {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.img::before, .img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 300px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img::before {
+  left: -6px;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
+
+  filter: grayscale(100%) sepia(100%) saturate(350%) hue-rotate(240deg) brightness(121%) contrast(121%);
+}
+.img::after {
+  left: 6px;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+
+  filter: grayscale(100%) sepia(100%) saturate(350%) hue-rotate(120deg) brightness(121%) contrast(121%);
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(299px, 400px, 56px, 0);
+  }
+  5.8823529412% {
+    clip: rect(126px, 400px, 204px, 0);
+  }
+  11.7647058824% {
+    clip: rect(74px, 400px, 62px, 0);
+  }
+  17.6470588235% {
+    clip: rect(123px, 400px, 252px, 0);
+  }
+  23.5294117647% {
+    clip: rect(280px, 400px, 225px, 0);
+  }
+  29.4117647059% {
+    clip: rect(25px, 400px, 202px, 0);
+  }
+  35.2941176471% {
+    clip: rect(164px, 400px, 60px, 0);
+  }
+  41.1764705882% {
+    clip: rect(110px, 400px, 214px, 0);
+  }
+  47.0588235294% {
+    clip: rect(88px, 400px, 104px, 0);
+  }
+  52.9411764706% {
+    clip: rect(279px, 400px, 102px, 0);
+  }
+  58.8235294118% {
+    clip: rect(64px, 400px, 146px, 0);
+  }
+  64.7058823529% {
+    clip: rect(47px, 400px, 12px, 0);
+  }
+  70.5882352941% {
+    clip: rect(296px, 400px, 166px, 0);
+  }
+  76.4705882353% {
+    clip: rect(202px, 400px, 264px, 0);
+  }
+  82.3529411765% {
+    clip: rect(183px, 400px, 248px, 0);
+  }
+  88.2352941176% {
+    clip: rect(27px, 400px, 36px, 0);
+  }
+  94.1176470588% {
+    clip: rect(266px, 400px, 195px, 0);
+  }
+  100% {
+    clip: rect(126px, 400px, 198px, 0);
+  }
+}

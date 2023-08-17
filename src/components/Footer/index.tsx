@@ -43,11 +43,15 @@ const Footer = () => {
           alignItems="center"
           sx={{ height: "100%" }}
         >
+          <a href="https://discord.gg/E8qRP5yq">
           <MenuButton>LITEPAPER</MenuButton>
-
+          </a>
+          <a href="https://discord.gg/E8qRP5yq">
           <MenuButton>T&CS</MenuButton>
-
+          </a>
+          <a href="https://discord.gg/E8qRP5yq">
           <MenuButton>JOBS</MenuButton>
+          </a>
         </Stack>
       </Stack>
     </AppBar>
