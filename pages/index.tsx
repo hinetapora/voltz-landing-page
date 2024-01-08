@@ -14,9 +14,21 @@ import Section6 from "@/src/containers/Home/Section6";
 import Section7 from "@/src/containers/Home/Section7";
 import Section8 from "@/src/containers/Home/Section8";
 import Section9 from "@/src/containers/Home/Section9";
+import { Web3ReactProvider } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { ExternalProvider, JsonRpcFetchFunc } from '@ethersproject/providers';
+
+
+const getLibrary = () => {
+  const library = new Web3Provider();
+  library.pollingInterval = 12000;
+  return library;
+}
 
 const Home = () => {
   return (
+    <Web3ReactProvider library={getLibrary}>
+
     <Box sx={{ pb: 3 }}>
       {/* Navbar */}
       <Navbar />
@@ -73,6 +85,8 @@ const Home = () => {
       {/* Footer */}
       <Footer />
     </Box>
+    </Web3ReactProvider>
+
   );
 };
 

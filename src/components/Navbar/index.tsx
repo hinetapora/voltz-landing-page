@@ -14,6 +14,13 @@ import Image from "next/image";
 import Logo from "public/logo-dark.svg";
 import MainButton from "../buttons/MainButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Web3ReactProvider, useWeb3React } from '@web3-react/core';
+import { InjectedConnector } from '@web3-react/injected-connector';
+import { Web3Provider } from '@ethersproject/providers';
+
+
+const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42] });
+
 
 export const MenuButton: React.FC<ButtonProps> = ({ children, sx = {} }) => (
   <Button
@@ -49,6 +56,15 @@ const resourceKeyframe = keyframes`
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { activate } = useWeb3React<Web3Provider>();
+
+  const handleConnect = async () => {
+    try {
+      await activate(injected);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   return (
     <AppBar
@@ -125,7 +141,7 @@ const Navbar = () => {
 
             <MenuButton>BACKERS</MenuButton>
 
-            <MainButton size="small" sx={{ height: 32 }}>
+      <MainButton size="small" sx={{ height: 32 }} onClick={handleConnect}>
               CONNECT
             </MainButton>
           </Stack>
